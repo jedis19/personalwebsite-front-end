@@ -1,0 +1,32 @@
+#chatbox {
+  height: 700px;
+  width: auto;
+  background-color: powderblue;
+  margin-top: 50px;
+  border: 3px solid black;
+  overflow-y: scroll;
+}
+h3{
+    margin-top: 15px;
+    text-align: center;
+}
+
+#send {
+ 
+    right: 0;
+}
+
+#messagetext {
+  margin-top: 10px;
+  border: 3px solid black;
+  padding: 0;
+}
+input {
+  overflow: auto;
+  width: 90%;
+  height: 90%;
+  border: none;
+}
+button {
+ width: 120px;
+}

@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono");
+@import url('https://use.fontawesome.com/releases/v5.1.0/css/all.css');
+
+@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
+
+
+.navbar-brand{
+  padding:5px;
+  padding-left : 20px;
+  height:50px;
+  position : relative;
+}
+
+.navbar-brand img{
+  height: 100%;
+}
+
+.thumbnail{
+  max-width : 500px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.shadow{
+  box-shadow: 7px 7px 7px #666;
+   position : relative;
+  transition : all 0.2s;
+  top : 0;
+}
+.cust-caption{
+  display:none;
+  position: absolute;
+  background-color: rgba(30,30,30,0.8);
+  padding : 10px;
+  color:#ddd;
+  margin:5px;
+  bottom:0;
+  left:0;
+  right:0;
+  height : 60%;
+  margin:5px;
+  overflow-y : auto;
+}
+
+.stm-font{
+  font-family: 'Share Tech Mono',monospace;
+}
+
+.color-hover:hover{
+	color : #337AB7;
+}
+
+.up-hover:hover {
+  top :-5px;
+  box-shadow: 15px 15px 15px #777;
+}
+
+.cust-caption a{
+  color:white;
+  
+  text-shadow:1px 1px 2px black;
+}
+
+
+.head h1{
+  color : white;
+}
+
+
+.heading{ 
+  text-align : center;
+  padding : 10px;
+}
+
+#about p{
+	font-size : 1.2em;
+		position : relative;
+	left : 10px;
+}
+
+
+
+.logo{
+	padding-top:50px;
+}
+
+.logo img{
+  position:relative;
+  width:100%;
+  max-width : 450px;
+  margin:auto;
+}
+
+.avatar{
+ display: block;
+	position:relative;
+	width : 200px;
+	margin:auto;
+}
+
+.showcase{
+	text-align:center;
+	padding-top:60px;
+}
+
+.showcase h1{
+font-size : 8em;
+}
+
+.btn{
+font-size: 1.5em;
+}
+.links{
+	padding:30px 0;
+}
+
+.main-nav{
+	padding-top:50px;
+}
+
+.main-nav h1{
+	padding-bottom:20px;
+}
+
+footer{
+  height : 100%;
+	min-height:250px;
+	color:#ccc;
+	font-size:1.5em;
+}
+
+.dark-bg {
+  background: fixed url('http://cdn.backgroundhost.com/backgrounds/subtlepatterns/random_grey_variations.png' );  
+}
+footer a{
+	color:white;
+}
+
+footer a:hover{
+	color:white;
+}
+
+
+footer img{
+	display:block;
+	position:relative;
+	margin:5px auto 20px auto;
+}
+
+.center{
+	text-align:center;
+}
+
+footer li, footer p{
+	margin : 0;
+	padding : 7px;
+}
+
+ul.links i {
+  font-size: 25px;
+}
+
+#uludag{
+  margin-top: 45px;
+}
+
+#educ{
+  margin-left: 17px;
+}
+#bas{
+text-align: center;
+}
+#myform{
+  
+  margin-top:185px;
+}
+
+:root {
+  --input-padding-x: .75rem;
+  --input-padding-y: .75rem;
+}
+
+
+.form-signin {
+  width: 100%;
+  max-width: 420px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-label-group > input,
+.form-label-group > label {
+  padding: var(--input-padding-y) var(--input-padding-x);
+}
+
+.form-label-group > label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0; /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #495057;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  transition: all .1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-moz-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::placeholder {
+  color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+  padding-bottom: calc(var(--input-padding-y) / 3);
+}
+
+.form-label-group input:not(:placeholder-shown) ~ label {
+  padding-top: calc(var(--input-padding-y) / 3);
+  padding-bottom: calc(var(--input-padding-y) / 3);
+  font-size: 12px;
+  color: #777;
+}

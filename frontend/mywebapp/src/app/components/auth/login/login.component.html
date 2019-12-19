@@ -1,0 +1,26 @@
+<form class="form-signin" #loginForm="ngForm">
+    <div class="text-center mb-4">
+      <h1 class="h3 mb-3 font-weight-normal">Giriş yap</h1>
+    </div>
+  
+    <div class="form-label-group">
+      <input type="email" email id="inputEmail" name="inputEmail" class="form-control" [(ngModel)]="model.email" pattern="^[a-zA-Z0-9_.+-]+@(?:(?:[a-zA-Z0-9-]+\.)?[a-zA-Z]+\.)?(hotmail|gmail)\.com$" #inputEmail="ngModel" placeholder="Email address" required autofocus>
+      <div class="alert alert-danger" *ngIf="inputEmail.invalid && inputEmail.dirty">Mail Adresi Gereklidir</div>
+      <div class="alert alert-danger" *ngIf="inputEmail.errors?.pattern && inputEmail.touched">Mail adresinizin gmail veya hotmail olması gerek</div>
+      <label for="inputEmail">Email Adress</label>
+    </div>
+  
+    <div class="form-label-group">
+      <input type="password" id="inputPassword" name="inputPassword" [(ngModel)]="model.password" pattern="^(?=.*\d)(?=.*[a-z]).{6,12}$" #inputPassword="ngModel" class="form-control" placeholder="Şifre" required>
+      <div class="alert alert-danger" *ngIf="inputPassword.invalid && inputPassword.dirty">Şifre Gereklidir</div>
+      <div class="alert alert-danger" *ngIf="inputPassword.errors?.pattern && inputPassword.touched">Şifreniz en az 6 en çok 12 karakter olmalı ve bir harf içermelidir</div>
+      <label for="inputPassword">Şifre</label>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf= "isShowError">
+      Kullanıcı Adı veya Şifre Hatalı
+    </div>
+  
+
+    <button class="btn btn-lg btn-primary btn-block" [disabled]="loginForm.invalid" type="submit" (click)="loginUser(model)">Giriş Yap</button>
+    <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2019</p>
+  </form>

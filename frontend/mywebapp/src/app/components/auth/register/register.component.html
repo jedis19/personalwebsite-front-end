@@ -1,0 +1,36 @@
+<form class="form-signin" #signInForm="ngForm" >
+    <div class="text-center mb-4">
+      <h1 class="h3 mb-3 font-weight-normal">Üye Ol</h1>
+    </div>
+  
+    <div class="form-label-group">
+      <input type="email" email id="inputEmail" name="inputEmail" pattern="^[a-zA-Z0-9_.+-]+@(?:(?:[a-zA-Z0-9-]+\.)?[a-zA-Z]+\.)?(hotmail|gmail)\.com$" class="form-control" [(ngModel)]="model.email" #email="ngModel" placeholder="Email address" required autofocus>
+      <div class="alert alert-danger" *ngIf="email.invalid && email.dirty">Mail Adresi Gereklidir</div>
+      <div class="alert alert-danger" *ngIf="email.errors?.pattern && email.touched">Mail adresinizin gmail veya hotmail olması gerek</div>
+      <label for="inputEmail">Email addresiniz</label>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf= "isShowError">
+      Bu e-posta adresi zaten kayıtlı
+    </div>
+  
+    <div class="form-label-group">
+      <input type="password" id="inputPassword" name="inputPassword" pattern="^(?=.*\d)(?=.*[a-z]).{6,12}$" class="form-control" placeholder="Password" [(ngModel)]="model.password" #password="ngModel" required>
+      <div class="alert alert-danger" *ngIf="password.invalid && password.dirty">Şifre Gereklidir</div>
+      <div class="alert alert-danger" *ngIf="password.errors?.pattern && password.touched">Şifreniz en az 6 en çok 12 karakter olmalı ve en az 1 harf içermelidir</div>
+      <label for="inputPassword">Şifreniz</label>
+    </div>
+    <div class="form-label-group">
+        <input type="text" id="inputFirstName" name="inputFirstName" [(ngModel)]="model.firstName" #firstName="ngModel" class="form-control" placeholder="First Name" required>
+        <div class="alert alert-danger" *ngIf="firstName.invalid && firstName.dirty">Adınız gereklidir</div>
+        <label for="inputFirstName">Adınız</label>
+      </div>
+      <div class="form-label-group">
+        <input type="text" id="inputLastName" name="inputLastName" [(ngModel)]="model.lastName" #lastName="ngModel" class="form-control" placeholder="Last Name" required>
+        <div class="alert alert-danger" *ngIf="lastName.invalid && lastName.dirty">Soy Adınız gereklidir</div>
+        <label for="inputLastName">Soy Adınız</label>
+      </div>
+  
+   
+    <button class="btn btn-lg btn-primary btn-block" (click)="register(model)"  [disabled]="signInForm.invalid" type="submit">Kayıt Ol</button>
+    <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2019</p>
+  </form>

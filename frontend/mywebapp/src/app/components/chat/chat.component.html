@@ -1,0 +1,33 @@
+<h3>Şuan sitede bulunan kişiler ile konuşabilirsiniz</h3>
+<div class="container">
+    <div class="col">
+        <div class="row">
+            <div class="col">
+
+                <div id="chatbox">
+
+                    <div *ngFor="let item of messages">
+                        <p>({{item.date | date:'HH:mm:ss'}}) <strong>{{item.username}}</strong>: {{item.message}}</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <form>
+            <div class="d-flex flex-row bd-highlight mb-3" id="messagetext">
+                
+                <input class="form-control" [(ngModel)]="message"  [ngModelOptions]="{standalone: true}" #messageBox="ngModel" placeholder="Mesajınızı yazın"
+                    type="text" required>
+
+                <button type="submit" class="btn btn-primary" [disabled]="messageBox.invalid || messageBox.pristine"
+                  (click)="sendMessage()"  id="send">Gönder</button>
+              
+            </div>
+        </form>
+    
+    </div>
+
+</div>

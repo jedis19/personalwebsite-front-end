@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+    <a class="navbar-brand" href="#">HG</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link"  routerLink="">Anasayfa <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="chat">Chat</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="aboutme">Hakkımda</a>
+        </li>
+
+         
+      </ul>
+
+      <ul class="navbar-nav mr-sm-2">
+          <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" *ngIf="isLoggedIn()==true" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{name}}
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" routerLink="me">Profilim</a>
+                <a class="dropdown-item" href="#">Ayarlar</a>
+              </div>
+            </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="register" *ngIf="isLoggedIn()==false" id="register" >Üye Ol <span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item active">
+            <a class="nav-link"  routerLink="login" *ngIf="isLoggedIn()==false" >Giriş <span class="sr-only">(current)</span></a>
+            <a class="nav-link" routerLink="login" *ngIf="isLoggedIn()==true"  (click)="logOut()" id="logout">Çıkış Yap <span class="sr-only">(current)</span></a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+
+ 
+
+
+  

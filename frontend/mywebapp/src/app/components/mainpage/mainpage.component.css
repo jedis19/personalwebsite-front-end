@@ -1,0 +1,166 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+@media screen and (min-width: 1500px) {  /* normal ekranlar için */
+  .firstone{
+    zoom: 1; 
+    zoom: 100%; 
+    width: 1920px;
+    height: 913px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  p.shining {
+   font-size: 4em;
+  }
+  p.shining2{
+    font-size: 3em;
+  }
+  img{
+    margin-left: 40px;
+  }
+  table{
+    font-weight: 5px;
+    height: 65px;
+    width: 65px;
+    margin-top: 35rem;
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width:601px) and (max-width: 1499px) { /* laptop için */
+  .firstone{
+    zoom: 0.8; 
+    zoom: 80%; 
+    width: 1920px;
+    height: 1071px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  p.shining {
+    margin-top: 155px;
+    font-size: 46px;
+    margin-left: 5px;
+   }
+   p.shining2{
+     margin-top:450px;
+     font-size: 2em;
+   }
+   img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+   }
+   table{
+     margin-top:615px;
+   }
+}
+
+@media screen and (max-width: 600px) { /* mobil ekranlar için modern olanlar */
+  .firstone{
+    display: flex;
+    height: 92.4vh;
+    flex-wrap: wrap;
+  }
+  p.shining {
+    margin-top: 155px;
+    font-size: 46px;
+    margin-left: 5px;
+   }
+   p.shining2{
+     font-size: 2em;
+   }
+   img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+   }
+ 
+
+ 
+}
+
+
+#element::-webkit-scrollbar {
+  display: none;
+}
+
+img{
+  height: 65px;
+  width: 65px;
+}
+
+.firstone {
+  justify-content: center;
+  max-width: 100%;
+  background: black;
+  text-align: center;
+}
+
+.shining {
+  max-width: 100%;
+  letter-spacing: 8px;
+  font-family: "Lato";
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background-size: 80%;
+  background-repeat: no-repeat;
+  color: transparent;
+  background-clip: text;
+  animation: shining 3s linear infinite;
+  margin-top: -9em;
+}
+
+.shining2 {
+  letter-spacing: 5px;
+  font-family: "Lato";
+  text-transform: uppercase;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background-size: 80%;
+  background-repeat: no-repeat;
+  color: transparent;
+  background-clip: text;
+  animation: shining 3s linear infinite;
+}
+
+@keyframes shining {
+  from {
+    background-position: -500%;
+  }
+  to {
+    background-position: 500%;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.first {
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out 0s forwards;
+  animation-delay: 1s;
+}
+
+.emphasis {
+  color: #fb6e67;
+}
